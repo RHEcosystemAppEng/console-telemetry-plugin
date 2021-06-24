@@ -1,0 +1,39 @@
+{
+  "name": "console-telemetry-plugin",
+  "description": "An OpenShift Console plugin for capturing events in segment.",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "clean": "rm -rf ./dist",
+    "build": "yarn clean && NODE_ENV=production yarn ts-node ./node_modules/.bin/webpack --mode=production",
+    "build-dev": "yarn clean && yarn ts-node ./node_modules/.bin/webpack --mode=development",
+    "http-server": "./http-server.sh ./dist",
+    "ts-node": "ts-node -O '{\"module\":\"commonjs\"}' -I '/node_modules/(?!(@openshift-console)/)/'"
+  },
+  "devDependencies": {
+    "@openshift-console/dynamic-plugin-sdk": "0.0.0-alpha14",
+    "@types/node": "15.12.4",
+    "comment-json": "4.1.0",
+    "copy-webpack-plugin": "5.1.x",
+    "http-server": "0.12.x",
+    "react": "16.9.0",
+    "read-pkg": "5.x",
+    "ts-loader": "6.2.2",
+    "ts-node": "5.0.1",
+    "typescript": "3.8.3",
+    "webpack": "5.0.0-beta.16",
+    "webpack-cli": "4.5.x"
+  },
+  "consolePlugin": {
+    "name": "console-telemetry-plugin",
+    "version": "1.0.0",
+    "displayName": "Telemetry Plugin",
+    "description": "An OpenShift Console plugin for capturing events in segment.",
+    "exposedModules": {
+      "telemetry": "./telemetry"
+    },
+    "dependencies": {
+      "@console/pluginAPI": "*"
+    }
+  }
+}
