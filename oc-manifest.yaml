@@ -25,7 +25,7 @@ spec:
     spec:
       containers:
         - name: console-telemetry-plugin
-          image: quay.io/christianvogt/console-telemetry-plugin:latest
+          image: quay.io/ecosystem-appeng/console-telemetry-plugin:latest
           ports:
             - containerPort: 9001
               protocol: TCP
