@@ -67,14 +67,16 @@ spec:
 Following commands should be executed in Console repository root.
 
 1. Build the image:
+
    ```sh
-   docker build -t quay.io/$USER/console-telemetry-plugin .
+   QUAY_USER=<quay user/org> yarn img-build
    ```
+
 2. Run the image:
    ```sh
-   docker run -it -p 9001:9001 quay.io/$USER/console-telemetry-plugin
+   QUAY_USER=<quay user/org> yarn img-run
    ```
 3. Push the image to image registry:
    ```sh
-   docker push quay.io/$USER/console-telemetry-plugin
+   QUAY_USER=<quay user/org> yarn img-push
    ```
