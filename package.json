@@ -7,9 +7,9 @@
     "clean": "rm -rf ./dist",
     "build": "yarn clean && NODE_ENV=production yarn ts-node ./node_modules/.bin/webpack --mode=production",
     "build-dev": "yarn clean && yarn ts-node ./node_modules/.bin/webpack --mode=development",
-    "img-build": "docker build -f Dockerfile -t quay.io/$USER/$npm_package_name:$npm_package_version .",
-    "img-push": "docker push quay.io/$USER/$npm_package_name:$npm_package_version",
-    "img-run": "docker run -it -p 9001:9001 quay.io/$USER/$npm_package_name:$npm_package_version",
+    "img-build": "docker build -f Dockerfile -t quay.io/$QUAY_USER/$npm_package_name:$npm_package_version .",
+    "img-push": "docker push quay.io/$QUAY_USER/$npm_package_name:$npm_package_version",
+    "img-run": "docker run -it -p 9001:9001 quay.io/$QUAY_USER/$npm_package_name:$npm_package_version",
     "http-server": "./http-server.sh ./dist",
     "ts-node": "ts-node -O '{\"module\":\"commonjs\"}' -I '/node_modules/(?!(@openshift-console)/)/'"
   },
