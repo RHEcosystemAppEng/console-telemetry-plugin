@@ -3,6 +3,7 @@ import { ConsoleRemotePlugin } from '@openshift-console/dynamic-plugin-sdk/webpa
 import * as webpack from 'webpack';
 import * as CopyPlugin from 'copy-webpack-plugin';
 import * as path from 'path';
+import { name as uniqueName } from './package.json';
 
 const config: webpack.Configuration = {
   context: path.resolve(__dirname, 'src'),
@@ -10,6 +11,7 @@ const config: webpack.Configuration = {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name]-bundle.js',
     chunkFilename: '[name]-chunk.js',
+    uniqueName,
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
