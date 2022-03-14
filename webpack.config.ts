@@ -1,15 +1,16 @@
 // @ts-ignore
-import { ConsoleRemotePlugin } from '@openshift-console/dynamic-plugin-sdk/webpack';
+import { ConsoleRemotePlugin } from '@openshift-console/dynamic-plugin-sdk-webpack';
 import * as webpack from 'webpack';
 import * as CopyPlugin from 'copy-webpack-plugin';
 import * as path from 'path';
-
 const config: webpack.Configuration = {
   context: path.resolve(__dirname, 'src'),
+  entry: {},
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name]-bundle.js',
     chunkFilename: '[name]-chunk.js',
+
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
