@@ -1,7 +1,7 @@
 {
   "name": "console-telemetry-plugin",
   "description": "An OpenShift Console plugin for capturing events in segment.",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "private": true,
   "scripts": {
     "clean": "rm -rf ./dist",
@@ -30,7 +30,7 @@
   },
   "consolePlugin": {
     "name": "console-telemetry-plugin",
-    "version": "1.0.0",
+    "version": "0.1.5",
     "displayName": "Telemetry Plugin",
     "description": "An OpenShift Console plugin for capturing events in segment.",
     "exposedModules": {
