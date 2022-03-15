@@ -14,7 +14,8 @@
     "ts-node": "ts-node -O '{\"module\":\"commonjs\"}' -I '/node_modules/(?!(@openshift-console)/)/'"
   },
   "devDependencies": {
-    "@openshift-console/dynamic-plugin-sdk": "0.0.0-alpha14",
+    "@openshift-console/dynamic-plugin-sdk": "0.0.5",
+    "@openshift-console/dynamic-plugin-sdk-webpack": "0.0.5",
     "@types/node": "15.12.4",
     "comment-json": "4.1.0",
     "copy-webpack-plugin": "5.1.x",
@@ -24,8 +25,8 @@
     "ts-loader": "6.2.2",
     "ts-node": "5.0.1",
     "typescript": "3.8.3",
-    "webpack": "5.0.0-beta.16",
-    "webpack-cli": "4.5.x"
+    "webpack": "5.63.x",
+    "webpack-cli": "^4.9.1"
   },
   "consolePlugin": {
     "name": "console-telemetry-plugin",
